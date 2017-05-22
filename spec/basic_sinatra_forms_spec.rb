@@ -13,8 +13,8 @@ describe App do
       expect(page).to have_field(:coach)
       expect(page).to have_field(:pg)
       expect(page).to have_field(:sg)
-      expect(page).to have_field(:sf)
       expect(page).to have_field(:pf)
+      expect(page).to have_field(:sf)
       expect(page).to have_field(:c)
     end
   end
@@ -64,13 +64,13 @@ describe App do
       expect(page).to have_text("Power Forward: Danny")
     end
 
-    it "displays the shooting gaurd's name in the browser" do
+    it "displays the small forward's name in the browser" do
       visit '/newteam'
 
-      fill_in(:sg, :with => "Joe")
+      fill_in(:sf, :with => "Joe")
       click_button "submit"
 
-      expect(page).to have_text("Shooting Guard: Joe")
+      expect(page).to have_text("Small Forward: Joe")
     end
 
     it "displays the center's name in the browser" do
